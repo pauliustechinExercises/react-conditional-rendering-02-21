@@ -9,30 +9,36 @@ const ControlledForm = () => {
 
   return (
     <div className="border">
-      <p>**Exercise 6: Styling Based on Conditions**</p>
+      <p>**Exercise 7: Controlled Form with Conditional Fields**</p>
       <p>
-        Create a `Notification` component that: - Displays a green background if
-        `type` is `"success"`. - Displays a red background if `type` is
-        `"error"`. - Displays a yellow background if `type` is `"warning"`.
+        Create a form with conditional fields: - If `userType` is "student,"
+        display a field for "Grade." - If `userType` is "teacher," display a
+        field for "Subject."
       </p>
 
       <div className="border w-full p-2">
         <form className="mb-4">
-          <label>
-            Enter (student / teacher):
-          </label>
-          <input className="border rounded-sm ml-2" type="text" onChange={handleInput}/>
+          <label>Enter (student / teacher):</label>
+          <input
+            className="border rounded-sm ml-2"
+            type="text"
+            onChange={handleInput}
+          />
         </form>
         <form>
-          {(userInput === "teacher") ? (
-            <label>Enter your subject:
-              <input type="text" className="border rounded-sm ml-2"/>
+          {userInput === "teacher" ? (
+            <label>
+              Enter your subject:
+              <input type="text" className="border rounded-sm ml-2" />
             </label>
-          ) : ((userInput === "student") ? (
-            <label>Enter your grade:
+          ) : userInput === "student" ? (
+            <label>
+              Enter your grade:
               <input type="number" className="border rounded-sm ml-2" />
             </label>
-          ) : (""))}
+          ) : (
+            ""
+          )}
         </form>
       </div>
     </div>
