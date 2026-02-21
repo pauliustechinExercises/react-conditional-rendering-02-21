@@ -3,6 +3,9 @@ import MultipleStates from "../components/Task2MultipleStates";
 import ConditionalWithElements from "../components/Task3CondWithElements";
 import RenderingDiffComp from "../components/Task4RenderindDiffComp";
 import DynamicLists from "../components/Task5DynamicLists";
+import Notification from "../components/Task6StylingBasedOnConditions";
+import ControlledForm from "../components/Task7ControlledForm";
+import ModalWindow from "../components/Task8ModalWindow";
 
 const MainPage = () => {
   return (
@@ -12,6 +15,9 @@ const MainPage = () => {
       <ConditionalWithElements />
       <RenderingDiffComp />
       <DynamicLists />
+      <Notification />
+      <ControlledForm />
+      <ModalWindow />
     </div>
   );
 };
